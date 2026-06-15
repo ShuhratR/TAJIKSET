@@ -1,6 +1,6 @@
 "use strict";
 
-const WHATSAPP_NUMBER = "992007884423";
+const WHATSAPP_NUMBER = "992876477676";
 const STORAGE_KEY = "tajikset-cart-v1";
 const LANGUAGE_KEY = "tajikset-language";
 const FORM_KEY = "tajikset-checkout-v1";

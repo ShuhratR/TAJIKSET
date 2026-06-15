@@ -246,7 +246,7 @@ const products = [
   },
   {
     id: 5,
-    image: "images/products/product-05.webp",
+    image: "images/products/product-05.webp?v=20260616-2",
     title: { tg: "Электроскутер 60V/20Ah", ru: "Электроскутер 60V/20Ah" },
     description: {
       tg: "Модели сарфакор ва боэътимод барои истифодаи ҳаррӯза.",
@@ -330,7 +330,7 @@ const products = [
   },
   {
     id: 10,
-    image: "images/products/product-10.webp",
+    image: "images/products/product-10.webp?v=20260616-2",
     title: { tg: "Электроскутер SK 2026 — 600W", ru: "Электроскутер SK 2026 — 600W" },
     description: {
       tg: "Модели SK барои шаҳр ва деҳа бо нархи махсус ва миқдори маҳдуд.",

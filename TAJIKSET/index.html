@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="tg" class="js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="TAJIKSET — электроскутерҳо бо расонидан дар саросари Тоҷикистон.">
+  <title>TAJIKSET — электроскутерҳо</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2218%22 fill=%22%23ffbd18%22/><path d=%22M18 19h28v8H36v22h-8V27H18z%22 fill=%22%23090909%22/></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="TAJIKSET">
+      <img class="brand-logo" src="assets/logo.svg" alt="TAJIKSET">
+    </a>
+    <div class="header-actions">
+      <div class="language-switch" role="group" aria-label="Забон">
+        <button class="lang-button active" type="button" data-lang="tg" aria-pressed="true">TJ</button>
+        <button class="lang-button" type="button" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
+      <button class="icon-button cart-top" type="button" data-open-cart aria-label="Корзина">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L20.5 8H6.2M10 20h.01M17 20h.01"/></svg>
+        <span class="cart-badge" data-cart-count>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><i></i><span data-i18n="heroEyebrow">Фурӯши онлайн • 24/7</span></span>
+        <h1 data-i18n="heroTitle">Қувва барои ҳар роҳ.</h1>
+        <p data-i18n="heroText">Электроскутерҳои боэътимод барои шаҳр, деҳа, кор ва доставка.</p>
+        <div class="hero-buttons">
+          <a class="primary-button" href="#catalog" data-i18n="viewCatalog">Дидани каталог</a>
+          <a class="secondary-button" href="https://wa.me/992007884423" target="_blank" rel="noopener">
+            <span data-i18n="askWhatsapp">Савол дар WhatsApp</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-halo"></div>
+        <img src="images/products/product-07.webp" alt="Электроскутер TAJIKSET">
+        <span class="hero-chip chip-power">2500W</span>
+        <span class="hero-chip chip-range">100 KM</span>
+      </div>
+      <div class="benefit-row">
+        <article>
+          <span class="benefit-icon">24</span>
+          <div><strong data-i18n="alwaysOpen">Ҳамеша фаъол</strong><small data-i18n="alwaysOpenText">Қабули фармоиш 24/7</small></div>
+        </article>
+        <article>
+          <span class="benefit-icon">0</span>
+          <div><strong data-i18n="freeDelivery">Расонидани ройгон</strong><small data-i18n="freeDeliveryText">Дар ҳудуди Душанбе</small></div>
+        </article>
+        <article>
+          <span class="benefit-icon">TJ</span>
+          <div><strong data-i18n="allCountry">Саросари кишвар</strong><small data-i18n="allCountryText">Нарх дар WhatsApp</small></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="popular-section shell" aria-labelledby="popularTitle">
+      <div class="section-heading reveal">
+        <div>
+          <span class="eyebrow"><i></i><span data-i18n="popularEyebrow">Тавсияи мо</span></span>
+          <h2 id="popularTitle" data-i18n="popularTitle">Моделҳои машҳур</h2>
+        </div>
+        <div class="popular-controls">
+          <button type="button" data-popular-scroll="-1" aria-label="Ба қафо">←</button>
+          <button type="button" data-popular-scroll="1" aria-label="Ба пеш">→</button>
+        </div>
+      </div>
+      <div class="popular-list" id="popularList"></div>
+    </section>
+
+    <section class="catalog-section shell" id="catalog">
+      <div class="section-heading reveal">
+        <div>
+          <span class="eyebrow"><i></i><span data-i18n="catalogEyebrow">Интихоби шумо</span></span>
+          <h2 data-i18n="catalogTitle">Электроскутерҳо</h2>
+        </div>
+        <p><span id="resultCount">10</span> <span data-i18n="productsCount">модел</span></p>
+      </div>
+
+      <div class="catalog-tools" id="catalogTools">
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="searchInput" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Ҷустуҷӯи модел...">
+          <button id="clearSearch" type="button" aria-label="Тоза кардан">×</button>
+        </label>
+        <div class="filters" id="filters">
+          <button class="filter-button active" type="button" data-filter="all" data-i18n="filterAll">Ҳама</button>
+          <button class="filter-button" type="button" data-filter="promo" data-i18n="filterPromo">Аксия</button>
+          <button class="filter-button" type="button" data-filter="city" data-i18n="filterCity">Барои шаҳр</button>
+          <button class="filter-button" type="button" data-filter="delivery" data-i18n="filterDelivery">Барои доставка</button>
+          <button class="filter-button" type="button" data-filter="power" data-i18n="filterPower">Пурқувват</button>
+        </div>
+        <button class="view-toggle" id="viewToggle" type="button" aria-label="Намуди рӯйхат" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <strong data-i18n="nothingFound">Ҳеҷ чиз ёфт нашуд</strong>
+        <p data-i18n="tryAnother">Номи дигарро нависед ё филтрро иваз кунед.</p>
+      </div>
+    </section>
+
+    <section class="how-section shell">
+      <div class="section-heading reveal">
+        <div>
+          <span class="eyebrow"><i></i><span data-i18n="simpleOrder">Осон ва зуд</span></span>
+          <h2 data-i18n="howTitle">Чӣ тавр фармоиш диҳем?</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <article class="reveal"><span>01</span><strong data-i18n="step1Title">Моделро интихоб кунед</strong><p data-i18n="step1Text">Хусусиятҳо ва варианти мувофиқро бинед.</p></article>
+        <article class="reveal"><span>02</span><strong data-i18n="step2Title">Маълумотро пур кунед</strong><p data-i18n="step2Text">Ном, рақам ва суроғаи расонидан.</p></article>
+        <article class="reveal"><span>03</span><strong data-i18n="step3Title">Ба WhatsApp фиристед</strong><p data-i18n="step3Text">Фармоиши тайёр ба оператор меравад.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="brand"><img class="brand-logo" src="assets/logo.svg" alt="TAJIKSET"></div>
+      <p>© 2026 TAJIKSET</p>
+    </div>
+  </footer>
+
+  <button class="floating-cart" type="button" data-open-cart>
+    <span><b data-i18n="cart">Сабад</b><i data-cart-count>0</i></span>
+    <strong data-cart-total>0 сомонӣ</strong>
+  </button>
+
+  <div class="modal" id="productModal" aria-hidden="true" inert>
+    <div class="modal-backdrop" data-close-product></div>
+    <article class="product-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
+      <button class="modal-close" type="button" data-close-product aria-label="Пӯшидан">×</button>
+      <div class="modal-product-image">
+        <img id="modalImage" src="" alt="">
+        <span class="product-label" id="modalLabel"></span>
+      </div>
+      <div class="modal-product-content">
+        <span class="product-kicker" id="modalKicker"></span>
+        <h3 id="modalProductTitle"></h3>
+        <p id="modalDescription"></p>
+        <div class="quick-specs" id="modalQuickSpecs"></div>
+        <button class="share-product" id="shareProduct" type="button">
+          <span>↗</span><span data-i18n="shareProduct">Моделро мубодила кунед</span>
+        </button>
+        <div class="variant-block" id="modalVariantBlock" hidden>
+          <strong data-i18n="chooseVariant">Интихоби аккумулятор</strong>
+          <div class="variant-options" id="modalVariants"></div>
+        </div>
+        <ul class="full-specs" id="modalSpecs"></ul>
+        <div class="modal-buy-row">
+          <div><small data-i18n="price">Нарх</small><strong id="modalPrice"></strong></div>
+          <button class="primary-button" id="modalAddButton" type="button" data-i18n="addToCart">Ба сабад</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" inert>
+    <div class="drawer-backdrop" data-close-cart></div>
+    <section class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <header class="drawer-header">
+        <div><span class="eyebrow"><i></i><span data-i18n="yourOrder">Фармоиши шумо</span></span><h2 id="cartTitle" data-i18n="cart">Сабад</h2></div>
+        <button class="modal-close" type="button" data-close-cart aria-label="Пӯшидан">×</button>
+      </header>
+      <div class="cart-content">
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty">
+          <strong data-i18n="cartEmpty">Сабад ҳоло холӣ аст</strong>
+          <p data-i18n="cartEmptyText">Модели писандро аз каталог илова кунед.</p>
+          <button class="secondary-button" type="button" data-close-cart data-i18n="backToCatalog">Ба каталог</button>
+        </div>
+
+        <form class="checkout-form" id="checkoutForm" hidden>
+          <h3 data-i18n="deliveryDetails">Маълумоти расонидан</h3>
+          <div class="delivery-switch">
+            <label>
+              <input type="radio" name="deliveryZone" value="dushanbe" checked>
+              <span><b data-i18n="dushanbe">Душанбе</b><small data-i18n="free">Ройгон</small></span>
+            </label>
+            <label>
+              <input type="radio" name="deliveryZone" value="regions">
+              <span><b data-i18n="regions">Дигар шаҳру ноҳияҳо</b><small data-i18n="agreeWhatsapp">Нарх дар WhatsApp</small></span>
+            </label>
+          </div>
+          <label class="form-field"><span data-i18n="name">Ном</span><input name="name" required autocomplete="name" data-i18n-placeholder="namePlaceholder" placeholder="Номи шумо"></label>
+          <label class="form-field"><span data-i18n="phone">Телефон</span><input name="phone" required inputmode="tel" autocomplete="tel" minlength="9" placeholder="+992"></label>
+          <label class="form-field"><span data-i18n="address">Суроға</span><input name="address" required minlength="5" autocomplete="street-address" data-i18n-placeholder="addressPlaceholder" placeholder="Шаҳр, кӯча, хона"></label>
+          <label class="form-field"><span data-i18n="comment">Шарҳ</span><textarea name="comment" rows="2" data-i18n-placeholder="commentPlaceholder" placeholder="Ранг ё маълумоти иловагӣ"></textarea></label>
+          <div class="payment-note"><span>↗</span><div><strong data-i18n="payment">Пардохт</strong><small data-i18n="paymentText">Интиқоли маблағ пас аз тасдиқи оператор</small></div></div>
+          <div class="order-summary">
+            <span data-i18n="productsTotal">Ҷамъи молҳо</span><strong data-checkout-total>0 сомонӣ</strong>
+            <span data-i18n="delivery">Расонидан</span><strong id="deliveryCost" data-i18n="free">Ройгон</strong>
+          </div>
+          <button class="whatsapp-button" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.7 11.7 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.6-8.4Zm-8.3 18.2c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.7 9.7 0 1 1 8.5 4.7Zm5.3-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.7-.3-.5.3-.5.9-1.7.1-.2 0-.5 0-.7-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.2-.2-.4-.3-.7-.4Z"/></svg>
+            <span data-i18n="sendOrder">Фиристодан ба WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
